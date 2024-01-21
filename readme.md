@@ -1,6 +1,13 @@
 # Posts App
 
-[![Posts App]('screenshot/Screenshot (59).png')](https://yourprojecturl.com)
+Live Demo: https://yourprojecturl.com
+
+![Screenshot 1](screenshot/Screenshot (59).png)
+![Screenshot 2](screenshot/Screenshot (60).png)
+![Screenshot 3](screenshot/Screenshot (61).png)
+![Screenshot 4](screenshot/Screenshot (62).png)
+![Screenshot 5](screenshot/Screenshot (63).png)
+
 
 A simple web application that allows users to create, view, edit, and delete posts.
 

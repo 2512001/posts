@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All posts</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="scroll-container">
+        <h1>Query Post</h1>
+        <% for(post of posts) { %>
+            <div class="post-container">
+                <h3 class="user">@<%= post.username %></h3>
+                <p class="post-content">
+                    <span>Content:</span>
+                    <%= post.content %>
+                </p>
+                <p class="gole-of-life">
+                    <span>Goal of life:</span>
+                    <%= post.gole %>
+                </p>
+              <div class="link">  
+                <a id='profile' href="http://localhost:8080/posts/<%=post.id%>">see profile </a>
+                <a id='profile' href="http://localhost:8080/posts/<%=post.id%>/editpost"> edit post </a>
+                <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+                <button type="submit">delete</button>
+                 </form>
+             </div>
+            </div>
+        <% } %>
+
+        <div id="newpost">
+            <a href="http://localhost:8080/posts/new">Create new post</a>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/locomotive-scroll@4.0.3/dist/locomotive-scroll.min.js"></script>
+    <script>
+        
+//         document.addEventListener("DOMContentLoaded", function() {
+//     const scroll = new LocomotiveScroll({
+//         el: document.querySelector(".scroll-container"),
+//         smooth: true
+//     });
+// });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All posts</title>
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.scroll-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+   
+}
+
+.post-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.user {
+    color: #3498db;
+    font-size: 1.2em;
+}
+
+.post-content,
+.gole-of-life {
+    margin-top: 10px;
+    color: #333;
+}
+
+.gole-of-life {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+footer {
+    background-color: #34495e;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.id{
+    color: #34dbd0;
+    font-size: 1.2em;
+     
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>this is @<%= post.username %> blog</h1>
+    </header>
+
+    <div class="scroll-container">
+      
+        <div class="post-container">
+            <h3 class="user">@<%= post.username %></h3>
+            <p class="post-content">
+                <span>Content:</span>
+                <%= post.content %>
+            </p>
+            <p class="gole-of-life">
+                <span>Goal of life:</span>
+                <%= post.gole %>
+            </p>
+            <h5 class="id">my id  is @<%= post.id %></h5>
+        </div>
+
+      
+
+        <!-- Add more content as needed -->
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Blog Name. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/locomotive-scroll@4.0.3/dist/locomotive-scroll.min.js"></script>
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const scroll = new LocomotiveScroll({
+                el: document.querySelector(".scroll-container"),
+                smooth: true
+            });
+        });
+    </script> -->
+</body>
+</html>

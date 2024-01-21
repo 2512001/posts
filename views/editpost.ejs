@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center; /* Centered heading */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #777;
+            text-align: center; /* Centered paragraph */
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            display: block; /* Full width button */
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+        <h1>Edit profile</h1>
+
+        <p>ID: <%= post.id %> | Name: <%= post.username %></p>
+
+        <textarea placeholder="Edit content" name="content"><%= post.content %></textarea>
+        <textarea placeholder="Edit goal" name="gole"><%= post.gole %></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
